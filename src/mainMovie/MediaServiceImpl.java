@@ -1,20 +1,17 @@
 package mainMovie;
 
-
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 
-
 public class MediaServiceImpl implements MediaService {
-	 Parent root;
+	Parent root;
 	MediaPlayer mediaPlayer;
-	 MediaView mediaView;
+	MediaView mediaView;
 	Button btnPlay, btnStop, btnPause;
-	
+
 	@Override
 	public void myPlay() {
 		mediaPlayer.play();
@@ -66,13 +63,12 @@ public class MediaServiceImpl implements MediaService {
 	}
 
 	public void setControll(Parent root) {
+
 		mediaView = (MediaView) root.lookup("#fxMediaView");
 		btnPlay = (Button) root.lookup("#btnPlay");
 		btnStop = (Button) root.lookup("#btnStop");
 		btnPause = (Button) root.lookup("#btnPause");
 
 	}
-
-
 
 }

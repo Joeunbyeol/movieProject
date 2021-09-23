@@ -7,19 +7,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MainMovie extends Application{
+public class MainMovie extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("mainMovie.fxml"));
-	
 		Parent root = loader.load();
-	
 		Scene scene = new Scene(root);
-
 		MainController ctl = loader.getController();
 		ctl.setRoot(root);
-
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
@@ -27,6 +23,5 @@ public class MainMovie extends Application{
 	public static void main(String[] args) {
 		launch(args);
 	}
-
 
 }
