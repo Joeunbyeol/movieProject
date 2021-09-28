@@ -4,6 +4,7 @@ import java.net.URL;
 
 import java.util.ResourceBundle;
 
+import developers.yong.seatResv.SeatResvMain;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 
@@ -16,11 +17,13 @@ public class DetailController01 implements Initializable {
 
 	public void setRoot(Parent root) {
 		this.root = root;
-		ms.setMedia(root,"/media/video1.mp4");
+		ms.setMedia(root,"/media/video0.mp4");
 	}
 
 	public void gotoSeatPage() {
 		System.out.println("좌석선택페이지");
+		SeatResvMain sm = new SeatResvMain();
+		sm.start();
 	}
 	public void gotoReviewPage() {
 		System.out.println("선호도및리뷰페이지");

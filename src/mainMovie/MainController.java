@@ -2,20 +2,21 @@ package mainMovie;
 
 
 import java.net.URL;
+
 import java.text.ParseException;
 import java.util.ResourceBundle;
 
-import db.DBService;
-import detail.detail01;
+import db.dbService;
 import detail.detail02;
+import detail.detail01;
 import detail.detail03;
 import detail.detail04;
-import detail.detail05;
 import detail.detail06;
 import detail.detail07;
 import detail.detail08;
 import detail.detail09;
 import detail.detail10;
+import detail.detail05;
 import javafx.event.ActionEvent;
 
 import javafx.fxml.Initializable;
@@ -25,7 +26,7 @@ import javafx.scene.Parent;
 public class MainController implements Initializable {
 
 	Parent root;
-	DBService db;
+	dbService db;
 
 	public void setRoot(Parent root) {
 		this.root = root;
@@ -40,8 +41,8 @@ public class MainController implements Initializable {
 	
        }
 	public void gotoDetail02( ) {
-		detail02 d2 = new detail02();
-		d2.start();
+		detail02 d = new detail02();
+		d.start();
 		System.out.println("디테일페이지로02");
 		
        }
@@ -95,7 +96,7 @@ public class MainController implements Initializable {
 	
 
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		db = new DBService();
+		db = new dbService();
 		
 	}
 	

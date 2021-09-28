@@ -2,13 +2,16 @@ package detail;
 
 
 import java.io.IOException;
+
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import db.DBService;
 
+import db.dbService;
 import detail.Controller.DetailController05;
+
 import dto.MovieDTO;
 
 import javafx.fxml.FXMLLoader;
@@ -17,10 +20,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-
-
-public class detail05 {
-	DBService db = new DBService();
+public class detail05{
+	dbService db = new dbService();
+	//MovieDTO dto = db.selectSQL("모가디슈");
 	
 	public void start()  {
 		Stage primaryStage = new Stage();
@@ -38,9 +40,11 @@ public class detail05 {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		///////////////////////////////////////////
-		MovieDTO dto = db.selectSQL("캔디맨");
+	
 		DetailController05 dc = loader.getController();
 		dc.setRoot(root);
+		
+		MovieDTO dto = db.selectSQL("모가디슈");
 		Label movieTitle = (Label) root.lookup("#movieTitle");
 		Label movieDate = (Label) root.lookup("#movieDate");
 		Label movieInfomation = (Label) root.lookup("#movieInfomation");
@@ -70,7 +74,7 @@ public class detail05 {
 		}
 	}
 	public static void main(String[] args) {
-		
+
 	}
 
 }

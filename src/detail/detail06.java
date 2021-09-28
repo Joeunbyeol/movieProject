@@ -2,12 +2,13 @@ package detail;
 
 
 import java.io.IOException;
+
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import db.DBService;
-
+import db.dbService;
 import detail.Controller.DetailController06;
 import dto.MovieDTO;
 
@@ -17,9 +18,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+
+
 public class detail06 {
-	DBService db = new DBService();
-	MovieDTO dto = db.selectSQL("");
+	dbService db = new dbService();
 	
 	public void start()  {
 		Stage primaryStage = new Stage();
@@ -37,7 +39,7 @@ public class detail06 {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		///////////////////////////////////////////
-		MovieDTO dto = db.selectSQL("극장판 짱구는 못말려: 격돌! 낙서왕국과 얼추 네 명의 용사들");
+		MovieDTO dto = db.selectSQL("캔디맨");
 		DetailController06 dc = loader.getController();
 		dc.setRoot(root);
 		Label movieTitle = (Label) root.lookup("#movieTitle");

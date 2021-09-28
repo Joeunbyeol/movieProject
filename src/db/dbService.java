@@ -16,7 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 
 
-public class DBService {
+public class dbService {
 	
 	final static String DRIVER = "oracle.jdbc.driver.OracleDriver";
 	final String URL = "jdbc:oracle:thin:@210.221.253.215:1521:xe";
@@ -32,7 +32,7 @@ public class DBService {
 			e.printStackTrace();
 		}
 	}
-	public DBService() {
+	public dbService() {
 		user = "five";
 		pw = "oracle";
 	}

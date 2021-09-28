@@ -6,8 +6,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import db.DBService;
 
+import db.dbService;
 import detail.Controller.DetailController03;
 import dto.MovieDTO;
 
@@ -18,7 +18,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class detail03 {
-	DBService db = new DBService();
+	dbService db = new dbService();
 
 	
 	public void start()  {
